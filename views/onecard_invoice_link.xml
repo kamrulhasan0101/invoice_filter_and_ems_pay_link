@@ -1,0 +1,51 @@
+<odoo>
+    <record id="view_student_payslip_form_inherit" model="ir.ui.view">
+        <field name="name">student.payslip.form.inherit</field>
+        <field name="model">student.payslip</field>
+        <field name="inherit_id" ref="school_fees.view_student_payslip_form"/>
+        <field name="arch" type="xml">
+             <data>
+                <xpath expr="//button[@name='invoice_view']" position="replace">
+<!--                    <button name="invoice_view" string="Invoice" icon="fa-pencil-square-o" widget="stateinfo"-->
+<!--                                class="C"-->
+<!--                                states="pending,paid" type="object" groups="base.group_user,school.group_school_student"/>-->
+                   <button name="invoice_link" string="Make Payment" icon="fa-money"
+                                class="C" type="object" groups="base.group_user,school.group_school_student"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+<!--  <record id="view_move_form11" model="ir.ui.view">-->
+<!--            <field name="name">account.move.form.inherit</field>-->
+<!--            <field name="model">account.move</field>-->
+<!--        <field name="inherit_id" ref="school_fees.view_student_payslip_form"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--                <form string="Account Entry">-->
+<!--                <xpath expr="//div[@name='button_box']" position="inside">-->
+<!--                        <button name="preview_invoice" type="object" string="Preview"-->
+<!--                                attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'out_refund'))]}"/>-->
+
+<!--                  </xpath>-->
+<!--                </form>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--    <record id="view_student_student_form2" model="ir.ui.view">-->
+<!--        <field name="name">student.student.form</field>-->
+<!--        <field name="model">student.student</field>-->
+<!--        <field name="inherit_id" ref="school.view_student_student_form_1"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <data>-->
+<!--                <xpath expr="//div[@name='buttons']" position="inside">-->
+<!--                    <button name="test" type="action" class="oe_inline oe_stat_button"-->
+<!--                            attrs="{'invisible':[('state', 'in', ['draft','terminate','alumni','cancel'])]}"-->
+<!--                            groups="school.group_school_administration,school.group_school_student">-->
+<!--                        <img src="/school_fees/static/description/icon.png" alt="logo"-->
+<!--                             style="height:25px;width:50px;float:left;"/>-->
+<!--                        <lable style="">Fees Receipt ssl</lable>-->
+<!--                    </button>-->
+<!--                </xpath>-->
+<!--            </data>-->
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>

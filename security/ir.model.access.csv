@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_onecard_payment_link_onecard_payment_link,onecard_payment_link.onecard_payment_link,model_onecard_payment_link_onecard_payment_link,base.group_user,1,1,1,1
+access_student_payslip_student,student.payslip,school_fees.model_student_payslip,school.group_school_student,1,0,0,0
+access_student_payslip_line_student,student.payslip.line,school_fees.model_student_payslip_line,school.group_school_student,1,0,0,0
+access_student_payslip_line_line_student,student.payslip.line.line,model_student_payslip_line_line,school.group_school_student,1,0,0,0

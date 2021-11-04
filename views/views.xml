@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="onecard_payment_link.list">
+      <field name="name">onecard_payment_link list</field>
+      <field name="model">onecard_payment_link.onecard_payment_link</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="onecard_payment_link.action_window">
+      <field name="name">onecard_payment_link window</field>
+      <field name="res_model">onecard_payment_link.onecard_payment_link</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="onecard_payment_link.action_server">
+      <field name="name">onecard_payment_link server</field>
+      <field name="model_id" ref="model_onecard_payment_link_onecard_payment_link"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="onecard_payment_link" id="onecard_payment_link.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="onecard_payment_link.menu_1" parent="onecard_payment_link.menu_root"/>
+    <menuitem name="Menu 2" id="onecard_payment_link.menu_2" parent="onecard_payment_link.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="onecard_payment_link.menu_1_list" parent="onecard_payment_link.menu_1"
+              action="onecard_payment_link.action_window"/>
+    <menuitem name="Server to list" id="onecard_payment_link" parent="onecard_payment_link.menu_2"
+              action="onecard_payment_link.action_server"/>
+-->
+  </data>
+</odoo>
